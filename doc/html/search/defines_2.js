@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['manufacturer_5fname_297',['MANUFACTURER_NAME',['../driver__mifare__ultralight_8c.html#aaa2b8f5b105c3019df0cb346f472e803',1,'driver_mifare_ultralight.c']]],
+  ['max_5fcurrent_298',['MAX_CURRENT',['../driver__mifare__ultralight_8c.html#a2989837a37d6d63b59c6dd541b785435',1,'driver_mifare_ultralight.c']]],
+  ['mifare_5fultralight_5fcommand_5fanticollision_5fcl1_299',['MIFARE_ULTRALIGHT_COMMAND_ANTICOLLISION_CL1',['../driver__mifare__ultralight_8c.html#a6ad125c79d86a7c1903a2fb487ae89c4',1,'driver_mifare_ultralight.c']]],
+  ['mifare_5fultralight_5fcommand_5fanticollision_5fcl2_300',['MIFARE_ULTRALIGHT_COMMAND_ANTICOLLISION_CL2',['../driver__mifare__ultralight_8c.html#afb8e3c67522fa5ebf6df7eb5d44c4dcf',1,'driver_mifare_ultralight.c']]],
+  ['mifare_5fultralight_5fcommand_5fcheck_5ftearing_5fevent_301',['MIFARE_ULTRALIGHT_COMMAND_CHECK_TEARING_EVENT',['../driver__mifare__ultralight_8c.html#a589af1a52340e4ad25ca78e7d0fe96e0',1,'driver_mifare_ultralight.c']]],
+  ['mifare_5fultralight_5fcommand_5fcomp_5fwrite_302',['MIFARE_ULTRALIGHT_COMMAND_COMP_WRITE',['../driver__mifare__ultralight_8c.html#aef032309ec22581ad7f4609af4efcb31',1,'driver_mifare_ultralight.c']]],
+  ['mifare_5fultralight_5fcommand_5ffast_5fread_303',['MIFARE_ULTRALIGHT_COMMAND_FAST_READ',['../driver__mifare__ultralight_8c.html#a990144cd17f837a6084f97b89775b5fc',1,'driver_mifare_ultralight.c']]],
+  ['mifare_5fultralight_5fcommand_5fget_5fversion_304',['MIFARE_ULTRALIGHT_COMMAND_GET_VERSION',['../driver__mifare__ultralight_8c.html#a4d38e3c2e14178360739af325d79e171',1,'driver_mifare_ultralight.c']]],
+  ['mifare_5fultralight_5fcommand_5fhalt_305',['MIFARE_ULTRALIGHT_COMMAND_HALT',['../driver__mifare__ultralight_8c.html#abc0ee17d65aa03f129d98345364f2b82',1,'driver_mifare_ultralight.c']]],
+  ['mifare_5fultralight_5fcommand_5fincr_5fcnt_306',['MIFARE_ULTRALIGHT_COMMAND_INCR_CNT',['../driver__mifare__ultralight_8c.html#a482c031c98b2147851f5a84fc30db24a',1,'driver_mifare_ultralight.c']]],
+  ['mifare_5fultralight_5fcommand_5fpwd_5fauth_307',['MIFARE_ULTRALIGHT_COMMAND_PWD_AUTH',['../driver__mifare__ultralight_8c.html#a3d5cf63c63fa0249d21b1a804c473dcd',1,'driver_mifare_ultralight.c']]],
+  ['mifare_5fultralight_5fcommand_5fread_308',['MIFARE_ULTRALIGHT_COMMAND_READ',['../driver__mifare__ultralight_8c.html#a49e231e8d08119ec4c27fe5870e08d3a',1,'driver_mifare_ultralight.c']]],
+  ['mifare_5fultralight_5fcommand_5fread_5fcnt_309',['MIFARE_ULTRALIGHT_COMMAND_READ_CNT',['../driver__mifare__ultralight_8c.html#a10256eadf2367080ece1983546916e1d',1,'driver_mifare_ultralight.c']]],
+  ['mifare_5fultralight_5fcommand_5fread_5fsig_310',['MIFARE_ULTRALIGHT_COMMAND_READ_SIG',['../driver__mifare__ultralight_8c.html#a8b44759a50c2c2b40c7fce58d7cc3f26',1,'driver_mifare_ultralight.c']]],
+  ['mifare_5fultralight_5fcommand_5frequest_311',['MIFARE_ULTRALIGHT_COMMAND_REQUEST',['../driver__mifare__ultralight_8c.html#accfe899e8d6f6bc11be69581bc57d688',1,'driver_mifare_ultralight.c']]],
+  ['mifare_5fultralight_5fcommand_5fselect_5fcl1_312',['MIFARE_ULTRALIGHT_COMMAND_SELECT_CL1',['../driver__mifare__ultralight_8c.html#a786beae4bc17e0e126642ef76e677fa7',1,'driver_mifare_ultralight.c']]],
+  ['mifare_5fultralight_5fcommand_5fselect_5fcl2_313',['MIFARE_ULTRALIGHT_COMMAND_SELECT_CL2',['../driver__mifare__ultralight_8c.html#a7546d19bde24892e69b47d28ef79bdef',1,'driver_mifare_ultralight.c']]],
+  ['mifare_5fultralight_5fcommand_5fvcsl_314',['MIFARE_ULTRALIGHT_COMMAND_VCSL',['../driver__mifare__ultralight_8c.html#a27cd0f349cdf4caecadc8a85ba71db95',1,'driver_mifare_ultralight.c']]],
+  ['mifare_5fultralight_5fcommand_5fwake_5fup_315',['MIFARE_ULTRALIGHT_COMMAND_WAKE_UP',['../driver__mifare__ultralight_8c.html#ad60806bc79bd4369f90f505223ab5afe',1,'driver_mifare_ultralight.c']]],
+  ['mifare_5fultralight_5fcommand_5fwrite_316',['MIFARE_ULTRALIGHT_COMMAND_WRITE',['../driver__mifare__ultralight_8c.html#a5791e93396dce854b2bb5bed8faac1a3',1,'driver_mifare_ultralight.c']]]
+];
