@@ -44,8 +44,9 @@ LibDriver complies with deviated MISRA standards.Libdriver complies with all man
 | --------- | ------------------------------------------------------------ | ------------ | ------------------------------------------------------------ | -------- |
 | 10.1      | Operands shall not be of an inappropriate essential type. (\|, &, ~, <<, >>) | incompatible | Embedded drivers need this method to set or clear some bits and drivers guarantee the safety of the operation. | very low |
 | 10.3      | The value of an expression shall not be assigned to an object with a narrower essential type or of a different essential type category.  (<<, >>) | incompatible | Embedded drivers need this method to set or clear some bits and drivers guarantee the safety of the operation. | very low |
-| 10.4      | Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category.  (\|, &, <<, >>) | incompatible | We use this function to convert driver data and drivers guarantee the safety of the operation. | very low |
-| 10.8      | The value of a composite expression shall not be cast to a different essential type category or a wider essential type. | incompatible | We use this function to convert driver data and drivers guarantee the safety of the operation. | very low |
+| 10.4      | Both operands of an operator in which the usual arithmetic conversions are performed shall have the same essential type category.  (\|, &, <<, >>) | incompatible | Embedded drivers need this method to set or clear some bits and drivers guarantee the safety of the operation. | very low |
+| 10.7      | If a composite expression is used as one operand of an operator in which the usual arithmetic conversions are performed then the other operand shall not have wider essential type. | incompatible | We use this function to convert driver data and drivers guarantee the safety of the operation. | very low |
+| 10.8      | The value of a composite expression shall not be cast to a different essential type category or a wider essential type. | incompatible | We use enumeration to define driver configuration, which is a friendly programming method and should be accepted and drivers guarantee the safety of the operation. | very low |
 
 ### Report
 
