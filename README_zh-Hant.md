@@ -9,6 +9,7 @@
 [![MISRA](https://img.shields.io/badge/misra-compliant-brightgreen.svg)](/misra/README.md) [![API](https://img.shields.io/badge/api-reference-blue.svg)](https://www.libdriver.com/docs/mifare_ultralight/index.html) [![License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](/LICENSE)
 
 NXP Semiconductors開發的MIFARE Ultralight EV1 MF0ULx1用於非接觸式智慧票據、智慧卡或權杖，並與接近耦合設備（PCD）結合使用。 MF0ULx1設計用於符合ISO/IEC 14443 A類標準的環境。 目標應用包括公共交通網絡中的單程票、限用票、可信卡或活動日通行證。 MF0ULx1可替代傳統的票務解決方案，如紙質票、磁條票或硬幣。 它是MIFARE DESFire或MIFARE Plus等非接觸式卡系列的票務對應產品。 MIFARE Ultralight EV1是MIFARE Ultralight售票IC的後續產品，功能完全向後相容。 其增强的功能和命令集實現了更高效的實現，並在系統設計中提供了更大的靈活性。 MIFARE Ultralight EV1的機械和電力規格是為滿足嵌入式和紙質票製造商的要求而定制的。
+
 LibDriver MIFARE_ Ultralight是LibDriver推出的MIFARE_ Ultralight全功能驅動，該驅動提供頁讀取，頁寫入等功能並且它符合MISRA標準。
 
 ### 目錄
