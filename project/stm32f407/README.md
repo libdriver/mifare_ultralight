@@ -1,6 +1,6 @@
-### 1. chip
+### 1. Chip
 
-#### 1.1 chip info
+#### 1.1 Chip Info
 
 chip name : STM32F407ZGT6.
 
@@ -16,9 +16,9 @@ gpio pin: INT PB0.
 
 reset pin: RESET PA8.
 
-### 2. shell
+### 2. Shell
 
-#### 2.1 shell parameter
+#### 2.1 Shell Parameter
 
 baud rate: 115200.
 
@@ -30,9 +30,9 @@ parity: none.
 
 flow control: none.
 
-### 3. mifare_ultralight
+### 3. MIFARE_ULTRALIGHT
 
-#### 3.1 command Instruction
+#### 3.1 Command Instruction
 
 ​           mifare_ultralight is a basic command which can test all mifare_ultralight driver function:
 
@@ -88,7 +88,7 @@ flow control: none.
 
 ​           -c check <addr>        check the tearing event.addr is the check address.
 
-#### 3.2 command example
+#### 3.2 Command Example
 
 ```shell
 mifare_ultralight -i
