@@ -27,15 +27,15 @@ LibDriver MIFARE_Ultralight is the full function driver of MIFARE_Ultralight lau
 
 /src includes LibDriver MIFARE_Ultralight source files.
 
-/interface includes LibDriver MIFARE_Ultralight RF platform independent template。
+/interface includes LibDriver MIFARE_Ultralight RF platform independent template.
 
-/test includes LibDriver MIFARE_Ultralight driver test code and this code can test the chip necessary function simply。
+/test includes LibDriver MIFARE_Ultralight driver test code and this code can test the chip necessary function simply.
 
 /example includes LibDriver MIFARE_Ultralight sample code.
 
 /doc includes LibDriver MIFARE_Ultralight offline document.
 
-/datasheet includes MIFARE_Ultralight datasheet。
+/datasheet includes MIFARE_Ultralight datasheet.
 
 /project includes the common Linux and MCU development board sample code. All projects use the shell script to debug the driver and the detail instruction can be found in each project's README.md.
 
@@ -50,6 +50,8 @@ Add /src, /interface and /example to your project.
 #### example basic
 
 ```C
+#include "driver_mifare_ultralight_basic.h"
+
 uint8_t res;
 uint8_t i;
 uint8_t id[8];

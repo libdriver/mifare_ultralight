@@ -1,32 +1,86 @@
-### 1. chip
+### 1. Chip
 
-#### 1.1 chip info
+#### 1.1 Chip Info
 
-chip name : Raspberry Pi 4B
+chip name : Raspberry Pi 4B.
 
-iic pin: SCL/SDA GPIO3/GPIO2
+iic pin: SCL/SDA GPIO3/GPIO2.
 
-spi pin: SCLK/MOSI/MISO/CS GPIO11/GPIO10/GPIO9/GPIO8
+spi pin: SCLK/MOSI/MISO/CS GPIO11/GPIO10/GPIO9/GPIO8.
 
-uart pin: TX/RX GPIO14/GPIO15
+uart pin: TX/RX GPIO14/GPIO15.
 
-gpio pin: INT GPIO17
+gpio pin: INT GPIO17.
 
-reset pin: RESET GPIO26
+reset pin: RESET GPIO26.
 
-### 2. install
+### 2. Install
 
-#### 2.1 install info
+#### 2.1 Dependencies
+
+Install the necessary dependencies.
 
 ```shell
-sudo apt-get install libgpiod-dev
+sudo apt-get install libgpiod-dev pkg-config cmake -y
+```
 
+#### 2.2 Makefile
+
+Build the project.
+
+```shell
 make
 ```
 
-### 3. mifare_ultralight
+Install the project and this is optional.
 
-#### 3.1 command Instruction
+```shell
+sudo make install
+```
+
+Uninstall the project and this is optional.
+
+```shell
+sudo make uninstall
+```
+
+#### 2.3 CMake
+
+Build the project.
+
+```shell
+mkdir build && cd build 
+cmake .. 
+make
+```
+
+Install the project and this is optional.
+
+```shell
+sudo make install
+```
+
+Uninstall the project and this is optional.
+
+```shell
+sudo make uninstall
+```
+
+Test the project and this is optional.
+
+```shell
+make test
+```
+
+Find the compiled library in CMake. 
+
+```cmake
+find_package(mifare_ultralight REQUIRED)
+```
+
+### 3. MIFARE_ULTRALIGHT
+
+#### 3.1 Command Instruction
 
 ​           mifare_ultralight is a basic command which can test all mifare_ultralight driver function:
 
@@ -82,7 +136,7 @@ make
 
 ​           -c check <addr>        check the tearing event.addr is the check address.
 
-#### 3.2 command example
+#### 3.2 Command Example
 
 ```shell
 ./mifare_ultralight -i
