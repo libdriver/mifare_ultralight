@@ -12,6 +12,12 @@ NXP Semiconductors developed the MIFARE Ultralight EV1 MF0ULx1 for use in a cont
 
 LibDriver MIFARE_Ultralight is the full function driver of MIFARE_Ultralight launched by LibDriver.It provides the function of read page, write page and so on. LibDriver is MISRA compliant.
 
+This repository includes submodule and you shold add "--recursive" to clone the whole project.
+
+```shell
+git clone https://github.com/hepingood/mifare_ultralight.git --recursive
+```
+
 ### Table of Contents
 
   - [Instruction](#Instruction)
@@ -38,6 +44,8 @@ LibDriver MIFARE_Ultralight is the full function driver of MIFARE_Ultralight lau
 /datasheet includes MIFARE_Ultralight datasheet.
 
 /project includes the common Linux and MCU development board sample code. All projects use the shell script to debug the driver and the detail instruction can be found in each project's README.md.
+
+/misra includes the LibDriver MISRA code scanning results.
 
 ### Install
 
@@ -385,13 +393,13 @@ return 0;
 
 ### Document
 
-Online documents: https://www.libdriver.com/docs/mifare_ultralight/index.html
+Online documents: [https://www.libdriver.com/docs/mifare_ultralight/index.html](https://www.libdriver.com/docs/mifare_ultralight/index.html).
 
-Offline documents: /doc/html/index.html
+Offline documents: /doc/html/index.html.
 
 ### Contributing
 
-Please sent an e-mail to lishifenging@outlook.com
+Please refer to CONTRIBUTING.md.
 
 ### License
 
@@ -439,4 +447,4 @@ SOFTWARE.
 
 ### Contact Us
 
-Please sent an e-mail to lishifenging@outlook.com
+Please sent an e-mail to lishifenging@outlook.com.

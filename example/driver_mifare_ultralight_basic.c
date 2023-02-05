@@ -171,7 +171,7 @@ uint8_t mifare_ultralight_basic_search(mifare_ultralight_storage_t *type, uint8_
         res = mifare_ultralight_request(&gs_handle, &t);
         if (res == 0)
         {
-            /* anticollision_cl1 */
+            /* anti collision_cl1 */
             res = mifare_ultralight_anticollision_cl1(&gs_handle, id);
             if (res == 0)
             {
@@ -179,7 +179,7 @@ uint8_t mifare_ultralight_basic_search(mifare_ultralight_storage_t *type, uint8_
                 res = mifare_ultralight_select_cl1(&gs_handle, id);
                 if (res == 0)
                 {
-                    /* anticollision_cl2 */
+                    /* anti collision_cl2 */
                     res = mifare_ultralight_anticollision_cl2(&gs_handle, id + 4);
                     if (res == 0)
                     {
