@@ -1,7 +1,7 @@
 [English](/README.md) | [ 简体中文](/README_zh-Hans.md) | [繁體中文](/README_zh-Hant.md) | [日本語](/README_ja.md) | [Deutsch](/README_de.md) | [한국어](/README_ko.md)
 
 <div align=center>
-<img src="/doc/image/logo.png"/>
+<img src="/doc/image/logo.svg" width="400" height="150"/>
 </div>
 
 ## LibDriver MIFARE_Ultralight
@@ -11,6 +11,12 @@
 NXP Semiconductors開發的MIFARE Ultralight EV1 MF0ULx1用於非接觸式智慧票據、智慧卡或權杖，並與接近耦合設備（PCD）結合使用。 MF0ULx1設計用於符合ISO/IEC 14443 A類標準的環境。 目標應用包括公共交通網絡中的單程票、限用票、可信卡或活動日通行證。 MF0ULx1可替代傳統的票務解決方案，如紙質票、磁條票或硬幣。 它是MIFARE DESFire或MIFARE Plus等非接觸式卡系列的票務對應產品。 MIFARE Ultralight EV1是MIFARE Ultralight售票IC的後續產品，功能完全向後相容。 其增强的功能和命令集實現了更高效的實現，並在系統設計中提供了更大的靈活性。 MIFARE Ultralight EV1的機械和電力規格是為滿足嵌入式和紙質票製造商的要求而定制的。
 
 LibDriver MIFARE_ Ultralight是LibDriver推出的MIFARE_ Ultralight全功能驅動，該驅動提供頁讀取，頁寫入等功能並且它符合MISRA標準。
+
+本倉庫包含子模塊，您需要增加“--recursive”選項完整克隆整個工程。
+
+```shell
+git clone https://github.com/hepingood/mifare_ultralight.git --recursive
+```
 
 ### 目錄
 
@@ -38,6 +44,8 @@ LibDriver MIFARE_ Ultralight是LibDriver推出的MIFARE_ Ultralight全功能驅�
 /datasheet目錄包含了MIFARE_Ultralight數據手冊。
 
 /project目錄包含了常用Linux與單片機開發板的工程樣例。所有工程均採用shell腳本作為調試方法，詳細內容可參考每個工程裡面的README.md。
+
+/misra目錄包含了LibDriver MISRA程式碼掃描結果。
 
 ### 安裝
 
@@ -385,13 +393,13 @@ return 0;
 
 ### 文檔
 
-在線文檔: https://www.libdriver.com/docs/mifare_ultralight/index.html
+在線文檔: [https://www.libdriver.com/docs/mifare_ultralight/index.html](https://www.libdriver.com/docs/mifare_ultralight/index.html)。
 
-離線文檔: /doc/html/index.html
+離線文檔: /doc/html/index.html。
 
 ### 貢獻
 
-請聯繫lishifenging@outlook.com
+請參攷CONTRIBUTING.md。
 
 ### 版權
 
@@ -407,4 +415,4 @@ MIT 許可證（MIT）
 
 ### 聯繫我們
 
-請聯繫lishifenging@outlook.com
+請聯繫lishifenging@outlook.com。

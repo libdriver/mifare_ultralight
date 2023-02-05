@@ -135,11 +135,11 @@ uint8_t mifare_ultralight_card_test(void)
         return 1;
     }
     
-    /* anticollision cl1 */
+    /* anti collision cl1 */
     res = mifare_ultralight_anticollision_cl1(&gs_handle, id);
     if (res != 0)
     {
-        mifare_ultralight_interface_debug_print("mifare_ultralight: anticollision cl1 failed.\n");
+        mifare_ultralight_interface_debug_print("mifare_ultralight: anti collision cl1 failed.\n");
         (void)mifare_ultralight_deinit(&gs_handle);
         
         return 1;
@@ -156,21 +156,21 @@ uint8_t mifare_ultralight_card_test(void)
     }
     mifare_ultralight_interface_debug_print("mifare_ultralight: id1 is 0x%02X 0x%02X 0x%02X 0x%02X.\n", id[0], id[1], id[2], id[3]);
     
-    /* anticollision cl2 */
+    /* anti collision cl2 */
     res = mifare_ultralight_anticollision_cl2(&gs_handle, id);
     if (res != 0)
     {
-        mifare_ultralight_interface_debug_print("mifare_ultralight: anticollision cl2 failed.\n");
+        mifare_ultralight_interface_debug_print("mifare_ultralight: anti collision cl2 failed.\n");
         (void)mifare_ultralight_deinit(&gs_handle);
         
         return 1;
     }
     
-    /* anticollision cl2 */
+    /* anti collision cl2 */
     res = mifare_ultralight_anticollision_cl2(&gs_handle, id);
     if (res != 0)
     {
-        mifare_ultralight_interface_debug_print("mifare_ultralight: anticollision cl2 failed.\n");
+        mifare_ultralight_interface_debug_print("mifare_ultralight: anti collision cl2 failed.\n");
         (void)mifare_ultralight_deinit(&gs_handle);
         
         return 1;

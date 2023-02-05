@@ -1,7 +1,7 @@
 [English](/README.md) | [ 简体中文](/README_zh-Hans.md) | [繁體中文](/README_zh-Hant.md) | [日本語](/README_ja.md) | [Deutsch](/README_de.md) | [한국어](/README_ko.md)
 
 <div align=center>
-<img src="/doc/image/logo.png"/>
+<img src="/doc/image/logo.svg" width="400" height="150"/>
 </div>
 
 ## LibDriver MIFARE_Ultralight
@@ -11,6 +11,12 @@
 NXP Semiconductors developed the MIFARE Ultralight EV1 MF0ULx1 for use in a contactless smart ticket, smart card, or token in combination with a Proximity Coupling Device (PCD). The MF0ULx1 is designed to work in an ISO/IEC 14443 Type-A compliant environment. The target applications include single trip or limited use tickets in public transport networks, loyalty cards or day passes for events. The MF0ULx1 serves as a replacement for conventional ticketing solutions such as paper tickets, magnetic stripe tickets or coins. It serves as a ticketing counterpart to contactless card families such as MIFARE DESFire or MIFARE Plus.The MIFARE Ultralight EV1 is succeeding the MIFARE Ultralight ticketing IC and is fully functional backward compatible. Its enhanced feature and command set enables more efficient implementations and offers more flexibility in system designs.The mechanical and electrical specifications of MIFARE Ultralight EV1 are tailored to meet the requirements of inlay and paper ticket manufacturers.
 
 LibDriver MIFARE_Ultralight is the full function driver of MIFARE_Ultralight launched by LibDriver.It provides the function of read page, write page and so on. LibDriver is MISRA compliant.
+
+This repository includes submodule and you shold add "--recursive" to clone the whole project.
+
+```shell
+git clone https://github.com/hepingood/mifare_ultralight.git --recursive
+```
 
 ### Table of Contents
 
@@ -38,6 +44,8 @@ LibDriver MIFARE_Ultralight is the full function driver of MIFARE_Ultralight lau
 /datasheet includes MIFARE_Ultralight datasheet.
 
 /project includes the common Linux and MCU development board sample code. All projects use the shell script to debug the driver and the detail instruction can be found in each project's README.md.
+
+/misra includes the LibDriver MISRA code scanning results.
 
 ### Install
 
@@ -385,13 +393,13 @@ return 0;
 
 ### Document
 
-Online documents: https://www.libdriver.com/docs/mifare_ultralight/index.html
+Online documents: [https://www.libdriver.com/docs/mifare_ultralight/index.html](https://www.libdriver.com/docs/mifare_ultralight/index.html).
 
-Offline documents: /doc/html/index.html
+Offline documents: /doc/html/index.html.
 
 ### Contributing
 
-Please sent an e-mail to lishifenging@outlook.com
+Please refer to CONTRIBUTING.md.
 
 ### License
 
@@ -439,4 +447,4 @@ SOFTWARE.
 
 ### Contact Us
 
-Please sent an e-mail to lishifenging@outlook.com
+Please sent an e-mail to lishifenging@outlook.com.

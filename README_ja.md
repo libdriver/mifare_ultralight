@@ -1,7 +1,7 @@
 [English](/README.md) | [ 简体中文](/README_zh-Hans.md) | [繁體中文](/README_zh-Hant.md) | [日本語](/README_ja.md) | [Deutsch](/README_de.md) | [한국어](/README_ko.md)
 
 <div align=center>
-<img src="/doc/image/logo.png"/>
+<img src="/doc/image/logo.svg" width="400" height="150"/>
 </div>
 
 ## LibDriver MIFARE_Ultralight
@@ -11,6 +11,12 @@
 NXPセミコンダクターズは、非接触型スマートチケット、スマートカード、または近接結合デバイス（PCD）と組み合わせたトークンで使用するためのMIFARE UltralightEV1MF0ULx1を開発しました。 MF0ULx1は、ISO / IEC14443Type-A準拠の環境で動作するように設計されています。対象となるアプリケーションには、公共交通機関ネットワークでの1回の旅行または限定使用のチケット、ポイントカード、またはイベントの1日パスが含まれます。 MF0ULx1は、紙の切符、磁気ストライプの切符、硬貨などの従来の発券ソリューションの代替品として機能します。 MIFAREDESFireやMIFAREPlusなどの非接触型カードファミリの発券カウンターパートとして機能します。MIFAREUltralightEV1は、MIFARE Ultralight発券ICの後継であり、完全に機能する下位互換性があります。その強化された機能とコマンドセットにより、より効率的な実装が可能になり、システム設計の柔軟性が高まります。MIFAREUltralight EV1の機械的および電気的仕様は、インレイおよび紙のチケットメーカーの要件を満たすように調整されています。
 
 LibDriver MIFARE_Ultralightは、LibDriverによって起動されるMIFARE_Ultralightの全機能ドライバーであり、ページの読み取り、ページの書き込みなどの機能を提供します。 LibDriverはMISRAに準拠しています。
+
+このリポジトリにはサブモジュールが含まれており、「--recursive」を追加してプロジェクト全体を複製する必要があります。
+
+```shell
+git clone https://github.com/hepingood/mifare_ultralight.git --recursive
+```
 
 ### 目次
 
@@ -38,6 +44,8 @@ LibDriver MIFARE_Ultralightは、LibDriverによって起動されるMIFARE_Ultr
 / datasheetディレクトリには、MIFARE_Ultralightデータシートが含まれています。
 
 / projectディレクトリには、一般的に使用されるLinuxおよびマイクロコントローラー開発ボードのプロジェクトサンプルが含まれています。 すべてのプロジェクトは、デバッグ方法としてシェルスクリプトを使用しています。詳細については、各プロジェクトのREADME.mdを参照してください。
+
+/ misraはLibDriver misraコードスキャン結果を含む。
 
 ### インストール
 
@@ -385,13 +393,13 @@ return 0;
 
 ### ドキュメント
 
-オンラインドキュメント: https://www.libdriver.com/docs/mifare_ultralight/index.html
+オンラインドキュメント: [https://www.libdriver.com/docs/mifare_ultralight/index.html](https://www.libdriver.com/docs/mifare_ultralight/index.html)。
 
-オフラインドキュメント: /doc/html/index.html
+オフラインドキュメント: /doc/html/index.html。
 
 ### 貢献
 
-お問い合わせくださいlishifenging@outlook.com
+CONTRIBUTING.mdを参照してください。
 
 ### 著作権
 
@@ -407,4 +415,4 @@ MITライセンス（MIT）
 
 ### 連絡して
 
-お問い合わせくださいlishifenging@outlook.com
+お問い合わせくださいlishifenging@outlook.com。

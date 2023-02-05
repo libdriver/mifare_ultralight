@@ -1,7 +1,7 @@
 [English](/README.md) | [ 简体中文](/README_zh-Hans.md) | [繁體中文](/README_zh-Hant.md) | [日本語](/README_ja.md) | [Deutsch](/README_de.md) | [한국어](/README_ko.md)
 
 <div align=center>
-<img src="/doc/image/logo.png"/>
+<img src="/doc/image/logo.svg" width="400" height="150"/>
 </div>
 
 ## LibDriver MIFARE_Ultralight
@@ -11,6 +11,12 @@
 NXP Semiconductors hat das MIFARE Ultralight EV1 MF0ULx1 für den Einsatz in einem kontaktlosen Smart Ticket, einer Smart Card oder einem Token in Kombination mit einem Proximity Coupling Device (PCD) entwickelt. Der MF0ULx1 wurde für den Betrieb in einer ISO/IEC 14443 Typ-A-konformen Umgebung entwickelt. Zu den Zielanwendungen zählen Einzelfahrt- oder Zeitfahrkarten in öffentlichen Verkehrsnetzen, Kundenkarten oder Tageskarten für Veranstaltungen. Der MF0ULx1 dient als Ersatz für herkömmliche Ticketing-Lösungen wie Papiertickets, Magnetstreifentickets oder Münzen. Es dient als Ticketing-Gegenstück zu kontaktlosen Kartenfamilien wie MIFARE DESFire oder MIFARE Plus. Das MIFARE Ultralight EV1 tritt die Nachfolge des MIFARE Ultralight Ticketing IC an und ist voll funktionsfähig abwärtskompatibel. Sein erweiterter Funktions- und Befehlssatz ermöglicht effizientere Implementierungen und bietet mehr Flexibilität bei Systemdesigns. Die mechanischen und elektrischen Spezifikationen von MIFARE Ultralight EV1 sind auf die Anforderungen von Inlay- und Papierticketherstellern zugeschnitten.
 
 LibDriver MIFARE_Ultralight ist der voll funktionsfähige Treiber von MIFARE_Ultralight, der von LibDriver gestartet wurde. Er bietet die Funktion zum Lesen von Seiten, Schreiben von Seiten usw. LibDriver ist MISRA-konform.
+
+Dieses Repository enthält ein Submodul und Sie sollten "--recursive" hinzufügen, um das gesamte Projekt zu klonen.
+
+```shell
+git clone https://github.com/hepingood/mifare_ultralight.git --recursive
+```
 
 ### Inhaltsverzeichnis
 
@@ -38,6 +44,8 @@ LibDriver MIFARE_Ultralight ist der voll funktionsfähige Treiber von MIFARE_Ult
 /Datenblatt enthält MIFARE_Ultralight-Datenblatt.
 
 /project enthält den allgemeinen Beispielcode für Linux- und MCU-Entwicklungsboards. Alle Projekte verwenden das Shell-Skript, um den Treiber zu debuggen, und die detaillierten Anweisungen finden Sie in der README.md jedes Projekts.
+
+/misra enthält die Ergebnisse des LibDriver MISRA Code Scans.
 
 ### Installieren
 
@@ -385,13 +393,13 @@ return 0;
 
 ### Dokument
 
-Online-Dokumente: https://www.libdriver.com/docs/mifare_ultralight/index.html
+Online-Dokumente: [https://www.libdriver.com/docs/mifare_ultralight/index.html](https://www.libdriver.com/docs/mifare_ultralight/index.html).
 
-Offline-Dokumente: /doc/html/index.html
+Offline-Dokumente: /doc/html/index.html.
 
 ### Beitrag
 
-Bitte senden Sie eine E-Mail an lishifenging@outlook.com
+Bitte beachten Sie CONTRIBUTING.md.
 
 ### Lizenz
 
@@ -439,4 +447,4 @@ SOFTWARE.
 
 ### Kontaktieren Sie uns
 
-Bitte senden Sie eine E-Mail an lishifenging@outlook.com
+Bitte senden Sie eine E-Mail an lishifenging@outlook.com.

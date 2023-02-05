@@ -319,12 +319,12 @@ uint8_t mifare_ultralight_wake_up(mifare_ultralight_handle_t *handle, mifare_ult
 uint8_t mifare_ultralight_halt(mifare_ultralight_handle_t *handle);
 
 /**
- * @brief      mifare_ultralight anticollision cl1
+ * @brief      mifare_ultralight anti collision cl1
  * @param[in]  *handle points to a mifare_ultralight handle structure
  * @param[out] *id points to an id buffer
  * @return     status code
  *             - 0 success
- *             - 1 anticollision cl1 failed
+ *             - 1 anti collision cl1 failed
  *             - 2 handle is NULL
  *             - 3 handle is not initialized
  *             - 4 output_len is invalid
@@ -334,12 +334,12 @@ uint8_t mifare_ultralight_halt(mifare_ultralight_handle_t *handle);
 uint8_t mifare_ultralight_anticollision_cl1(mifare_ultralight_handle_t *handle, uint8_t id[4]);
 
 /**
- * @brief      mifare_ultralight anticollision cl2
+ * @brief      mifare_ultralight anti collision cl2
  * @param[in]  *handle points to a mifare_ultralight handle structure
  * @param[out] *id points to an id buffer
  * @return     status code
  *             - 0 success
- *             - 1 anticollision cl2 failed
+ *             - 1 anti collision cl2 failed
  *             - 2 handle is NULL
  *             - 3 handle is not initialized
  *             - 4 output_len is invalid
@@ -722,7 +722,7 @@ uint8_t mifare_ultralight_set_authenticate_limitation(mifare_ultralight_handle_t
 /**
  * @brief      mifare_ultralight get the authenticate limitation
  * @param[in]  *handle points to a mifare_ultralight handle structure
- * @param[out] *limit points to a authenticate limitation buffer
+ * @param[out] *limit points to an authenticate limitation buffer
  * @return     status code
  *             - 0 success
  *             - 1 get authenticate limitation failed
@@ -846,10 +846,10 @@ uint8_t mifare_ultralight_write_otp(mifare_ultralight_handle_t *handle, uint8_t 
 /**
  * @brief         transceiver data
  * @param[in]     *handle points to a mifare_ultralight handle structure
- * @param[in]     *in_buf points to a input buffer
+ * @param[in]     *in_buf points to an input buffer
  * @param[in]     in_len is the input length
- * @param[out]    *out_buf points to a output buffer
- * @param[in,out] *out_len points to a output length buffer
+ * @param[out]    *out_buf points to an output buffer
+ * @param[in,out] *out_len points to an output length buffer
  * @return        status code
  *                - 0 success
  *                - 1 transceiver failed
