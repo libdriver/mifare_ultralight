@@ -15,7 +15,7 @@ LibDriver MIFARE_Ultralight ist der voll funktionsfähige Treiber von MIFARE_Ult
 Dieses Repository enthält ein Submodul und Sie sollten "--recursive" hinzufügen, um das gesamte Projekt zu klonen.
 
 ```shell
-git clone https://github.com/hepingood/mifare_ultralight.git --recursive
+git clone https://github.com/libdriver/mifare_ultralight.git --recursive
 ```
 
 ### Inhaltsverzeichnis

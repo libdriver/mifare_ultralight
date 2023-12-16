@@ -15,7 +15,7 @@ LibDriver MIFARE_ Ultralight是LibDriver推出的MIFARE_ Ultralight全功能驅�
 本倉庫包含子模塊，您需要增加“--recursive”選項完整克隆整個工程。
 
 ```shell
-git clone https://github.com/hepingood/mifare_ultralight.git --recursive
+git clone https://github.com/libdriver/mifare_ultralight.git --recursive
 ```
 
 ### 目錄
