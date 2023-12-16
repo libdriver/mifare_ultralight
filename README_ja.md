@@ -15,7 +15,7 @@ LibDriver MIFARE_Ultralightは、LibDriverによって起動されるMIFARE_Ultr
 このリポジトリにはサブモジュールが含まれており、「--recursive」を追加してプロジェクト全体を複製する必要があります。
 
 ```shell
-git clone https://github.com/hepingood/mifare_ultralight.git --recursive
+git clone https://github.com/libdriver/mifare_ultralight.git --recursive
 ```
 
 ### 目次
