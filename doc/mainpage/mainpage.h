@@ -1,6 +1,6 @@
 /**
- * @mainpage  LibDriver MIFARE Ultralight
- * @brief     libdriver mifare_ultralight is a full function driver of MIFARE Ultralight and it can run in both MCU and Linux platform.
+ * @mainpage  LibDriver MIFARE ULTRALIGHT
+ * @brief     libdriver MIFARE_ULTRALIGHT is a full function driver of MIFARE_ULTRALIGHT and it can run in both MCU and Linux platform.
  * @version   1.0.0
  * @author    Shifeng Li
  *
