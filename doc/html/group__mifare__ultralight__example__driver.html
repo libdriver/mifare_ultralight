@@ -228,8 +228,8 @@ Functions</h2></td></tr>
 <p>basic example authenticate </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*pwd</td><td>points to a password buffer </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*pack</td><td>points to a pack buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*pwd</td><td>pointer to a password buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*pack</td><td>pointer to a pack buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -273,8 +273,8 @@ Functions</h2></td></tr>
 <p>basic example check the tearing event </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>is the increment counter address </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*flag</td><td>points to a flag buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>increment counter address </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*flag</td><td>pointer to a flag buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -336,7 +336,7 @@ Functions</h2></td></tr>
 <p>basic example get serial number </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">*number</td><td>points to a number buffer </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*number</td><td>pointer to a number buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -370,7 +370,7 @@ Functions</h2></td></tr>
 <p>basic example get version </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">*version</td><td>points to a version structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*version</td><td>pointer to a version structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -442,8 +442,8 @@ Functions</h2></td></tr>
 <p>basic example increment counter </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>is the increment counter address </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">cnt</td><td>is the increment counter </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>increment counter address </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cnt</td><td>increment counter </td></tr>
   </table>
   </dd>
 </dl>
@@ -515,8 +515,8 @@ Functions</h2></td></tr>
 <p>basic example read </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">page</td><td>is the read page </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*data</td><td>points to a data buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">page</td><td>read page </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*data</td><td>pointer to a data buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -560,8 +560,8 @@ Functions</h2></td></tr>
 <p>basic example read counter </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>is the read counter address </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*cnt</td><td>points to a counter buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>read counter address </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*cnt</td><td>pointer to a counter buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -605,8 +605,8 @@ Functions</h2></td></tr>
 <p>basic example read four pages </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">start_page</td><td>is the start page </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*data</td><td>points to a data buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">start_page</td><td>start page </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*data</td><td>pointer to a data buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -640,7 +640,7 @@ Functions</h2></td></tr>
 <p>basic example read otp </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">*data</td><td>points to a data buffer </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*data</td><td>pointer to a data buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -696,10 +696,10 @@ Functions</h2></td></tr>
 <p>basic example read pages </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">start_page</td><td>is the start page </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">stop_page</td><td>is the stop page </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*data</td><td>points to a data buffer </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">*len</td><td>points to a data length buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">start_page</td><td>start page </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">stop_page</td><td>stop page </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*data</td><td>pointer to a data buffer </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">*len</td><td>pointer to a data length buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -733,7 +733,7 @@ Functions</h2></td></tr>
 <p>basic example read signature </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">*signature</td><td>points to a signature buffer </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*signature</td><td>pointer to a signature buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -783,9 +783,9 @@ Functions</h2></td></tr>
 <p>basic example search </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">*type</td><td>points to a type buffer </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*id</td><td>points to an id buffer </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">timeout</td><td>is the check times </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*type</td><td>pointer to a type buffer </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*id</td><td>pointer to an id buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">timeout</td><td>check times </td></tr>
   </table>
   </dd>
 </dl>
@@ -829,8 +829,8 @@ Functions</h2></td></tr>
 <p>basic example set access </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">access</td><td>is the set access </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>is a bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">access</td><td>set access </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>bool value </td></tr>
   </table>
   </dd>
 </dl>
@@ -864,7 +864,7 @@ Functions</h2></td></tr>
 <p>basic example set the authenticate limitation </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">limit</td><td>is the authenticate limitation </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">limit</td><td>authenticate limitation </td></tr>
   </table>
   </dd>
 </dl>
@@ -898,7 +898,7 @@ Functions</h2></td></tr>
 <p>basic example set lock </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*lock</td><td>points to a lock buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*lock</td><td>pointer to a lock buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -932,7 +932,7 @@ Functions</h2></td></tr>
 <p>basic example set modulation mode </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>is the modulation mode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>modulation mode </td></tr>
   </table>
   </dd>
 </dl>
@@ -976,8 +976,8 @@ Functions</h2></td></tr>
 <p>basic example set password and pack </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*pwd</td><td>points to a password buffer </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*pack</td><td>points to a pack buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*pwd</td><td>pointer to a password buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*pack</td><td>pointer to a pack buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1011,7 +1011,7 @@ Functions</h2></td></tr>
 <p>basic example set protect start page </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">page</td><td>is the start page </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">page</td><td>start page </td></tr>
   </table>
   </dd>
 </dl>
@@ -1083,8 +1083,8 @@ Functions</h2></td></tr>
 <p>basic example write </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">page</td><td>is the written page </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*data</td><td>points to a data buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">page</td><td>written page </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*data</td><td>pointer to a data buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1118,7 +1118,7 @@ Functions</h2></td></tr>
 <p>basic example write otp </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*data</td><td>points to a data buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*data</td><td>pointer to a data buffer </td></tr>
   </table>
   </dd>
 </dl>

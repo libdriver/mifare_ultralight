@@ -477,8 +477,8 @@ Functions</h2></td></tr>
 <p>mifare_ultralight anti collision cl1 </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a mifare_ultralight handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*id</td><td>points to an id buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a mifare_ultralight handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*id</td><td>pointer to an id buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -526,8 +526,8 @@ Functions</h2></td></tr>
 <p>mifare_ultralight anti collision cl2 </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a mifare_ultralight handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*id</td><td>points to an id buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a mifare_ultralight handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*id</td><td>pointer to an id buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -581,9 +581,9 @@ Functions</h2></td></tr>
 <p>mifare_ultralight authenticate </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a mifare_ultralight handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*pwd</td><td>points to a pwd buffer </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*pack</td><td>points to a pack buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a mifare_ultralight handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*pwd</td><td>pointer to a pwd buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*pack</td><td>pointer to a pack buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -638,9 +638,9 @@ Functions</h2></td></tr>
 <p>mifare_ultralight check the tearing event </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a mifare_ultralight handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>is the check address </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*flag</td><td>points to a flag buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a mifare_ultralight handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>check address </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*flag</td><td>pointer to a flag buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -695,9 +695,9 @@ Functions</h2></td></tr>
 <p>mifare_ultralight compatibility write page </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a mifare_ultralight handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">page</td><td>is the page of write </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*data</td><td>points to a data buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a mifare_ultralight handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">page</td><td>page of write </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*data</td><td>pointer to a data buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -735,7 +735,7 @@ Functions</h2></td></tr>
 <p>close the chip </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a mifare_ultralight handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a mifare_ultralight handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -799,11 +799,11 @@ Functions</h2></td></tr>
 <p>mifare_ultralight fast read page </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a mifare_ultralight handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">start_page</td><td>is the start page </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">stop_page</td><td>is the stop page </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*data</td><td>points to a data buffer </td></tr>
-    <tr><td class="paramdir">[in,out]</td><td class="paramname">*len</td><td>points to a data length buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a mifare_ultralight handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">start_page</td><td>start page </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">stop_page</td><td>stop page </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*data</td><td>pointer to a data buffer </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">*len</td><td>pointer to a data length buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -860,9 +860,9 @@ Functions</h2></td></tr>
 <p>mifare_ultralight get the access status </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a mifare_ultralight handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">access</td><td>is the set access </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>points to a bool value buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a mifare_ultralight handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">access</td><td>set access </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*enable</td><td>pointer to a bool value buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -908,8 +908,8 @@ Functions</h2></td></tr>
 <p>mifare_ultralight get the authenticate limitation </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a mifare_ultralight handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*limit</td><td>points to an authenticate limitation buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a mifare_ultralight handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*limit</td><td>pointer to an authenticate limitation buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -955,8 +955,8 @@ Functions</h2></td></tr>
 <p>mifare_ultralight get the lock </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a mifare_ultralight handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*lock</td><td>points to a lock buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a mifare_ultralight handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*lock</td><td>pointer to a lock buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1004,8 +1004,8 @@ Functions</h2></td></tr>
 <p>mifare_ultralight get the modulation mode </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a mifare_ultralight handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*mode</td><td>points to a modulation mode buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a mifare_ultralight handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*mode</td><td>pointer to a modulation mode buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1051,8 +1051,8 @@ Functions</h2></td></tr>
 <p>mifare_ultralight get the start page of protection </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a mifare_ultralight handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*page</td><td>points to a start page buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a mifare_ultralight handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*page</td><td>pointer to a start page buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1098,8 +1098,8 @@ Functions</h2></td></tr>
 <p>mifare_ultralight get the serial number </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a mifare_ultralight handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*number</td><td>points to a number buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a mifare_ultralight handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*number</td><td>pointer to a number buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1147,8 +1147,8 @@ Functions</h2></td></tr>
 <p>get the storage </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a mifare_ultralight handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*storage</td><td>points to a set storage buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a mifare_ultralight handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*storage</td><td>pointer to a set storage buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1193,8 +1193,8 @@ Functions</h2></td></tr>
 <p>mifare_ultralight get the version </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a mifare_ultralight handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*version</td><td>points to a version structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a mifare_ultralight handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*version</td><td>pointer to a version structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -1242,8 +1242,8 @@ Functions</h2></td></tr>
 <p>mifare_ultralight get the virtual card type identifier </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a mifare_ultralight handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*identifier</td><td>points to a virtual card type identifier buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a mifare_ultralight handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*identifier</td><td>pointer to a virtual card type identifier buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1279,7 +1279,7 @@ Functions</h2></td></tr>
 <p>mifare_ultralight halt </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a mifare_ultralight handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a mifare_ultralight handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -1331,9 +1331,9 @@ Functions</h2></td></tr>
 <p>mifare_ultralight increment the counter </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a mifare_ultralight handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>is the read counter address </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">cnt</td><td>is the increment counter </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a mifare_ultralight handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>read counter address </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cnt</td><td>increment counter </td></tr>
   </table>
   </dd>
 </dl>
@@ -1372,7 +1372,7 @@ Functions</h2></td></tr>
 <p>get chip information </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[out]</td><td class="paramname">*info</td><td>points to a mifare_ultralight info structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*info</td><td>pointer to a mifare_ultralight info structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -1406,7 +1406,7 @@ Functions</h2></td></tr>
 <p>initialize the chip </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a mifare_ultralight handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a mifare_ultralight handle structure </td></tr>
   </table>
   </dd>
 </dl>
@@ -1458,9 +1458,9 @@ Functions</h2></td></tr>
 <p>mifare_ultralight read the counter </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a mifare_ultralight handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>is the read counter address </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*cnt</td><td>points to a counter buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a mifare_ultralight handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">addr</td><td>read counter address </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*cnt</td><td>pointer to a counter buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1515,9 +1515,9 @@ Functions</h2></td></tr>
 <p>mifare_ultralight read four pages </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a mifare_ultralight handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">start_page</td><td>is the start page of read </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*data</td><td>points to a data buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a mifare_ultralight handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">start_page</td><td>start page of read </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*data</td><td>pointer to a data buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1565,8 +1565,8 @@ Functions</h2></td></tr>
 <p>mifare_ultralight read otp page </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a mifare_ultralight handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*data</td><td>points to a data buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a mifare_ultralight handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*data</td><td>pointer to a data buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1620,9 +1620,9 @@ Functions</h2></td></tr>
 <p>mifare_ultralight read page </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a mifare_ultralight handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">page</td><td>is the page of read </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*data</td><td>points to a data buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a mifare_ultralight handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">page</td><td>page of read </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*data</td><td>pointer to a data buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1670,8 +1670,8 @@ Functions</h2></td></tr>
 <p>mifare_ultralight read the signature </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a mifare_ultralight handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*signature</td><td>points to a signature buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a mifare_ultralight handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*signature</td><td>pointer to a signature buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1719,8 +1719,8 @@ Functions</h2></td></tr>
 <p>mifare_ultralight request </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a mifare_ultralight handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*type</td><td>points to a type buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a mifare_ultralight handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*type</td><td>pointer to a type buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1768,8 +1768,8 @@ Functions</h2></td></tr>
 <p>mifare_ultralight select cl1 </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a mifare_ultralight handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*id</td><td>points to an id buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a mifare_ultralight handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*id</td><td>pointer to an id buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1817,8 +1817,8 @@ Functions</h2></td></tr>
 <p>mifare_ultralight select cl2 </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a mifare_ultralight handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*id</td><td>points to an id buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a mifare_ultralight handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*id</td><td>pointer to an id buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -1872,9 +1872,9 @@ Functions</h2></td></tr>
 <p>mifare_ultralight enable or disable access </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a mifare_ultralight handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">access</td><td>is the set access </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>is a bool value </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a mifare_ultralight handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">access</td><td>set access </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">enable</td><td>bool value </td></tr>
   </table>
   </dd>
 </dl>
@@ -1920,8 +1920,8 @@ Functions</h2></td></tr>
 <p>mifare_ultralight set the authenticate limitation </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a mifare_ultralight handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">limit</td><td>is the authenticate limitation </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a mifare_ultralight handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">limit</td><td>authenticate limitation </td></tr>
   </table>
   </dd>
 </dl>
@@ -1968,8 +1968,8 @@ Functions</h2></td></tr>
 <p>mifare_ultralight set the lock </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a mifare_ultralight handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*lock</td><td>points to a lock buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a mifare_ultralight handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*lock</td><td>pointer to a lock buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -2029,8 +2029,8 @@ Functions</h2></td></tr>
 <p>mifare_ultralight set the modulation mode </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a mifare_ultralight handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>is the modulation mode </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a mifare_ultralight handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">mode</td><td>modulation mode </td></tr>
   </table>
   </dd>
 </dl>
@@ -2076,8 +2076,8 @@ Functions</h2></td></tr>
 <p>mifare_ultralight set the pack </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a mifare_ultralight handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*pack</td><td>points to a pack buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a mifare_ultralight handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*pack</td><td>pointer to a pack buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -2125,8 +2125,8 @@ Functions</h2></td></tr>
 <p>mifare_ultralight set the password </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a mifare_ultralight handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*pwd</td><td>points to a password buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a mifare_ultralight handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*pwd</td><td>pointer to a password buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -2174,8 +2174,8 @@ Functions</h2></td></tr>
 <p>mifare_ultralight set the start page of protection </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a mifare_ultralight handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">page</td><td>is the start page </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a mifare_ultralight handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">page</td><td>start page </td></tr>
   </table>
   </dd>
 </dl>
@@ -2221,8 +2221,8 @@ Functions</h2></td></tr>
 <p>set the storage </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a mifare_ultralight handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">storage</td><td>is the set storage </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a mifare_ultralight handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">storage</td><td>set storage </td></tr>
   </table>
   </dd>
 </dl>
@@ -2267,8 +2267,8 @@ Functions</h2></td></tr>
 <p>mifare_ultralight set the virtual card type identifier </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a mifare_ultralight handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">identifier</td><td>is the virtual card type identifier </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a mifare_ultralight handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">identifier</td><td>virtual card type identifier </td></tr>
   </table>
   </dd>
 </dl>
@@ -2326,10 +2326,10 @@ Functions</h2></td></tr>
 <p>mifare_ultralight vcsl command </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a mifare_ultralight handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*installation_identifier</td><td>points to an installation identifier buffer </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*pcd_capabilities</td><td>points to a pcd capabilities buffer </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*identifier</td><td>points to an identifier buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a mifare_ultralight handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*installation_identifier</td><td>pointer to an installation identifier buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*pcd_capabilities</td><td>pointer to a pcd capabilities buffer </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*identifier</td><td>pointer to an identifier buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -2377,8 +2377,8 @@ Functions</h2></td></tr>
 <p>mifare_ultralight wake up </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a mifare_ultralight handle structure </td></tr>
-    <tr><td class="paramdir">[out]</td><td class="paramname">*type</td><td>points to a type buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a mifare_ultralight handle structure </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">*type</td><td>pointer to a type buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -2426,8 +2426,8 @@ Functions</h2></td></tr>
 <p>mifare_ultralight write otp page </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a mifare_ultralight handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*data</td><td>points to a data buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a mifare_ultralight handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*data</td><td>pointer to a data buffer </td></tr>
   </table>
   </dd>
 </dl>
@@ -2481,9 +2481,9 @@ Functions</h2></td></tr>
 <p>mifare_ultralight write page </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>points to a mifare_ultralight handle structure </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">page</td><td>is the page of write </td></tr>
-    <tr><td class="paramdir">[in]</td><td class="paramname">*data</td><td>points to a data buffer </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*handle</td><td>pointer to a mifare_ultralight handle structure </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">page</td><td>page of write </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">*data</td><td>pointer to a data buffer </td></tr>
   </table>
   </dd>
 </dl>

@@ -40,7 +40,7 @@ static mifare_ultralight_handle_t gs_handle;        /**< mifare_ultralight handl
 
 /**
  * @brief     interface print format data
- * @param[in] fmt is the format data
+ * @param[in] fmt format data
  * @note      none
  */
 static void s_debug_print(const char *const fmt, ...)
@@ -151,9 +151,9 @@ uint8_t mifare_ultralight_basic_wake_up(void)
 
 /**
  * @brief      basic example search
- * @param[out] *type points to a type buffer
- * @param[out] *id points to an id buffer
- * @param[in]  timeout is the check times
+ * @param[out] *type pointer to a type buffer
+ * @param[out] *id pointer to an id buffer
+ * @param[in]  timeout check times
  * @return     status code
  *             - 0 success
  *             - 1 timeout
@@ -240,8 +240,8 @@ uint8_t mifare_ultralight_basic_search(mifare_ultralight_storage_t *type, uint8_
 
 /**
  * @brief      basic example read
- * @param[in]  page is the read page
- * @param[out] *data points to a data buffer
+ * @param[in]  page read page
+ * @param[out] *data pointer to a data buffer
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -263,8 +263,8 @@ uint8_t mifare_ultralight_basic_read(uint8_t page, uint8_t data[4])
 
 /**
  * @brief      basic example read four pages
- * @param[in]  start_page is the start page
- * @param[out] *data points to a data buffer
+ * @param[in]  start_page start page
+ * @param[out] *data pointer to a data buffer
  * @return     status code
  *             - 0 success
  *             - 1 read failed
@@ -286,10 +286,10 @@ uint8_t mifare_ultralight_basic_read_four_pages(uint8_t start_page, uint8_t data
 
 /**
  * @brief         basic example read pages
- * @param[in]     start_page is the start page
- * @param[in]     stop_page is the stop page
- * @param[out]    *data points to a data buffer
- * @param[in,out] *len points to a data length buffer
+ * @param[in]     start_page start page
+ * @param[in]     stop_page stop page
+ * @param[out]    *data pointer to a data buffer
+ * @param[in,out] *len pointer to a data length buffer
  * @return        status code
  *                - 0 success
  *                - 1 read failed
@@ -312,8 +312,8 @@ uint8_t mifare_ultralight_basic_read_pages(uint8_t start_page, uint8_t stop_page
 
 /**
  * @brief     basic example write
- * @param[in] page is the written page
- * @param[in] *data points to a data buffer
+ * @param[in] page written page
+ * @param[in] *data pointer to a data buffer
  * @return    status code
  *            - 0 success
  *            - 1 write failed
@@ -335,7 +335,7 @@ uint8_t mifare_ultralight_basic_write(uint8_t page, uint8_t data[4])
 
 /**
  * @brief     basic example write otp
- * @param[in] *data points to a data buffer
+ * @param[in] *data pointer to a data buffer
  * @return    status code
  *            - 0 success
  *            - 1 write otp failed
@@ -357,7 +357,7 @@ uint8_t mifare_ultralight_basic_write_otp(uint8_t data[4])
 
 /**
  * @brief      basic example read otp
- * @param[out] *data points to a data buffer
+ * @param[out] *data pointer to a data buffer
  * @return     status code
  *             - 0 success
  *             - 1 read otp failed
@@ -379,7 +379,7 @@ uint8_t mifare_ultralight_basic_read_otp(uint8_t data[4])
 
 /**
  * @brief      basic example get version
- * @param[out] *version points to a version structure
+ * @param[out] *version pointer to a version structure
  * @return     status code
  *             - 0 success
  *             - 1 get version failed
@@ -401,8 +401,8 @@ uint8_t mifare_ultralight_basic_get_version(mifare_ultralight_version_t *version
 
 /**
  * @brief      basic example read counter
- * @param[in]  addr is the read counter address
- * @param[out] *cnt points to a counter buffer
+ * @param[in]  addr read counter address
+ * @param[out] *cnt pointer to a counter buffer
  * @return     status code
  *             - 0 success
  *             - 1 read counter failed
@@ -424,8 +424,8 @@ uint8_t mifare_ultralight_basic_read_counter(uint8_t addr, uint32_t *cnt)
 
 /**
  * @brief     basic example increment counter
- * @param[in] addr is the increment counter address
- * @param[in] cnt is the increment counter
+ * @param[in] addr increment counter address
+ * @param[in] cnt increment counter
  * @return    status code
  *            - 0 success
  *            - 1 increment counter failed
@@ -447,8 +447,8 @@ uint8_t mifare_ultralight_basic_increment_counter(uint8_t addr, uint32_t cnt)
 
 /**
  * @brief      basic example check the tearing event
- * @param[in]  addr is the increment counter address
- * @param[out] *flag points to a flag buffer
+ * @param[in]  addr increment counter address
+ * @param[out] *flag pointer to a flag buffer
  * @return     status code
  *             - 0 success
  *             - 1 check tearing event failed
@@ -470,7 +470,7 @@ uint8_t mifare_ultralight_basic_check_tearing_event(uint8_t addr, uint8_t *flag)
 
 /**
  * @brief      basic example read signature
- * @param[out] *signature points to a signature buffer
+ * @param[out] *signature pointer to a signature buffer
  * @return     status code
  *             - 0 success
  *             - 1 read signature failed
@@ -492,7 +492,7 @@ uint8_t mifare_ultralight_basic_read_signature(uint8_t signature[32])
 
 /**
  * @brief      basic example get serial number
- * @param[out] *number points to a number buffer
+ * @param[out] *number pointer to a number buffer
  * @return     status code
  *             - 0 success
  *             - 1 get serial number failed
@@ -514,8 +514,8 @@ uint8_t mifare_ultralight_basic_get_serial_number(uint8_t number[7])
 
 /**
  * @brief     basic example set password and pack
- * @param[in] *pwd points to a password buffer
- * @param[in] *pack points to a pack buffer
+ * @param[in] *pwd pointer to a password buffer
+ * @param[in] *pack pointer to a pack buffer
  * @return    status code
  *            - 0 success
  *            - 1 set password pack failed
@@ -544,8 +544,8 @@ uint8_t mifare_ultralight_basic_set_password_pack(uint8_t pwd[4], uint8_t pack[2
 
 /**
  * @brief     basic example authenticate
- * @param[in] *pwd points to a password buffer
- * @param[in] *pack points to a pack buffer
+ * @param[in] *pwd pointer to a password buffer
+ * @param[in] *pack pointer to a pack buffer
  * @return    status code
  *            - 0 success
  *            - 1 authenticate failed
@@ -567,7 +567,7 @@ uint8_t mifare_ultralight_basic_authenticate(uint8_t pwd[4], uint8_t pack[2])
 
 /**
  * @brief     basic example set lock
- * @param[in] *lock points to a lock buffer
+ * @param[in] *lock pointer to a lock buffer
  * @return    status code
  *            - 0 success
  *            - 1 set lock failed
@@ -589,7 +589,7 @@ uint8_t mifare_ultralight_basic_set_lock(uint8_t lock[5])
 
 /**
  * @brief     basic example set modulation mode
- * @param[in] mode is the modulation mode
+ * @param[in] mode modulation mode
  * @return    status code
  *            - 0 success
  *            - 1 set modulation mode failed
@@ -611,7 +611,7 @@ uint8_t mifare_ultralight_basic_set_modulation_mode(mifare_ultralight_modulation
 
 /**
  * @brief     basic example set protect start page
- * @param[in] page is the start page
+ * @param[in] page start page
  * @return    status code
  *            - 0 success
  *            - 1 set protect start page failed
@@ -633,7 +633,7 @@ uint8_t mifare_ultralight_basic_set_protect_start_page(uint8_t page)
 
 /**
  * @brief     basic example set the authenticate limitation
- * @param[in] limit is the authenticate limitation
+ * @param[in] limit authenticate limitation
  * @return    status code
  *            - 0 success
  *            - 1 set authenticate limitation failed
@@ -655,8 +655,8 @@ uint8_t mifare_ultralight_basic_set_authenticate_limitation(uint8_t limit)
 
 /**
  * @brief     basic example set access
- * @param[in] access is the set access
- * @param[in] enable is a bool value
+ * @param[in] access set access
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set access failed
