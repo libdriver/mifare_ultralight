@@ -161,48 +161,48 @@ typedef struct mifare_ultralight_info_s
 
 /**
  * @brief     initialize mifare_ultralight_handle_t structure
- * @param[in] HANDLE points to a mifare_ultralight handle structure
- * @param[in] STRUCTURE is mifare_ultralight_handle_t
+ * @param[in] HANDLE pointer to a mifare_ultralight handle structure
+ * @param[in] STRUCTURE mifare_ultralight_handle_t
  * @note      none
  */
 #define DRIVER_MIFARE_ULTRALIGHT_LINK_INIT(HANDLE, STRUCTURE)                  memset(HANDLE, 0, sizeof(STRUCTURE))
 
 /**
  * @brief     link contactless_init function
- * @param[in] HANDLE points to a mifare_ultralight handle structure
- * @param[in] FUC points to a contactless_init function address
+ * @param[in] HANDLE pointer to a mifare_ultralight handle structure
+ * @param[in] FUC pointer to a contactless_init function address
  * @note      none
  */
 #define DRIVER_MIFARE_ULTRALIGHT_LINK_CONTACTLESS_INIT(HANDLE, FUC)           (HANDLE)->contactless_init = FUC
 
 /**
  * @brief     link contactless_deinit function
- * @param[in] HANDLE points to a mifare_ultralight handle structure
- * @param[in] FUC points to a contactless_deinit function address
+ * @param[in] HANDLE pointer to a mifare_ultralight handle structure
+ * @param[in] FUC pointer to a contactless_deinit function address
  * @note      none
  */
 #define DRIVER_MIFARE_ULTRALIGHT_LINK_CONTACTLESS_DEINIT(HANDLE, FUC)         (HANDLE)->contactless_deinit = FUC
 
 /**
  * @brief     link contactless_transceiver function
- * @param[in] HANDLE points to a mifare_ultralight handle structure
- * @param[in] FUC points to a contactless_transceiver function address
+ * @param[in] HANDLE pointer to a mifare_ultralight handle structure
+ * @param[in] FUC pointer to a contactless_transceiver function address
  * @note      none
  */
 #define DRIVER_MIFARE_ULTRALIGHT_LINK_CONTACTLESS_TRANSCEIVER(HANDLE, FUC)    (HANDLE)->contactless_transceiver = FUC
 
 /**
  * @brief     link delay_ms function
- * @param[in] HANDLE points to a mifare_ultralight handle structure
- * @param[in] FUC points to a delay_ms function address
+ * @param[in] HANDLE pointer to a mifare_ultralight handle structure
+ * @param[in] FUC pointer to a delay_ms function address
  * @note      none
  */
 #define DRIVER_MIFARE_ULTRALIGHT_LINK_DELAY_MS(HANDLE, FUC)                   (HANDLE)->delay_ms = FUC
 
 /**
  * @brief     link debug_print function
- * @param[in] HANDLE points to a mifare_ultralight handle structure
- * @param[in] FUC points to a debug_print function address
+ * @param[in] HANDLE pointer to a mifare_ultralight handle structure
+ * @param[in] FUC pointer to a debug_print function address
  * @note      none
  */
 #define DRIVER_MIFARE_ULTRALIGHT_LINK_DEBUG_PRINT(HANDLE, FUC)                (HANDLE)->debug_print = FUC
@@ -220,7 +220,7 @@ typedef struct mifare_ultralight_info_s
 
 /**
  * @brief      get chip information
- * @param[out] *info points to a mifare_ultralight info structure
+ * @param[out] *info pointer to a mifare_ultralight info structure
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -230,7 +230,7 @@ uint8_t mifare_ultralight_info(mifare_ultralight_info_t *info);
 
 /**
  * @brief     initialize the chip
- * @param[in] *handle points to a mifare_ultralight handle structure
+ * @param[in] *handle pointer to a mifare_ultralight handle structure
  * @return    status code
  *            - 0 success
  *            - 1 contactless initialization failed
@@ -242,7 +242,7 @@ uint8_t mifare_ultralight_init(mifare_ultralight_handle_t *handle);
 
 /**
  * @brief     close the chip
- * @param[in] *handle points to a mifare_ultralight handle structure
+ * @param[in] *handle pointer to a mifare_ultralight handle structure
  * @return    status code
  *            - 0 success
  *            - 1 contactless deinit failed
@@ -254,8 +254,8 @@ uint8_t mifare_ultralight_deinit(mifare_ultralight_handle_t *handle);
 
 /**
  * @brief     set the storage
- * @param[in] *handle points to a mifare_ultralight handle structure
- * @param[in] storage is the set storage
+ * @param[in] *handle pointer to a mifare_ultralight handle structure
+ * @param[in] storage set storage
  * @return    status code
  *            - 0 success
  *            - 2 handle is NULL
@@ -266,8 +266,8 @@ uint8_t mifare_ultralight_set_storage(mifare_ultralight_handle_t *handle, mifare
 
 /**
  * @brief      get the storage
- * @param[in]  *handle points to a mifare_ultralight handle structure
- * @param[out] *storage points to a set storage buffer
+ * @param[in]  *handle pointer to a mifare_ultralight handle structure
+ * @param[out] *storage pointer to a set storage buffer
  * @return     status code
  *             - 0 success
  *             - 2 handle is NULL
@@ -278,8 +278,8 @@ uint8_t mifare_ultralight_get_storage(mifare_ultralight_handle_t *handle, mifare
 
 /**
  * @brief      mifare_ultralight request
- * @param[in]  *handle points to a mifare_ultralight handle structure
- * @param[out] *type points to a type buffer
+ * @param[in]  *handle pointer to a mifare_ultralight handle structure
+ * @param[out] *type pointer to a type buffer
  * @return     status code
  *             - 0 success
  *             - 1 request failed
@@ -293,8 +293,8 @@ uint8_t mifare_ultralight_request(mifare_ultralight_handle_t *handle, mifare_ult
 
 /**
  * @brief      mifare_ultralight wake up
- * @param[in]  *handle points to a mifare_ultralight handle structure
- * @param[out] *type points to a type buffer
+ * @param[in]  *handle pointer to a mifare_ultralight handle structure
+ * @param[out] *type pointer to a type buffer
  * @return     status code
  *             - 0 success
  *             - 1 wake up failed
@@ -308,7 +308,7 @@ uint8_t mifare_ultralight_wake_up(mifare_ultralight_handle_t *handle, mifare_ult
 
 /**
  * @brief      mifare_ultralight halt
- * @param[in]  *handle points to a mifare_ultralight handle structure
+ * @param[in]  *handle pointer to a mifare_ultralight handle structure
  * @return     status code
  *             - 0 success
  *             - 1 halt failed
@@ -320,8 +320,8 @@ uint8_t mifare_ultralight_halt(mifare_ultralight_handle_t *handle);
 
 /**
  * @brief      mifare_ultralight anti collision cl1
- * @param[in]  *handle points to a mifare_ultralight handle structure
- * @param[out] *id points to an id buffer
+ * @param[in]  *handle pointer to a mifare_ultralight handle structure
+ * @param[out] *id pointer to an id buffer
  * @return     status code
  *             - 0 success
  *             - 1 anti collision cl1 failed
@@ -335,8 +335,8 @@ uint8_t mifare_ultralight_anticollision_cl1(mifare_ultralight_handle_t *handle, 
 
 /**
  * @brief      mifare_ultralight anti collision cl2
- * @param[in]  *handle points to a mifare_ultralight handle structure
- * @param[out] *id points to an id buffer
+ * @param[in]  *handle pointer to a mifare_ultralight handle structure
+ * @param[out] *id pointer to an id buffer
  * @return     status code
  *             - 0 success
  *             - 1 anti collision cl2 failed
@@ -350,8 +350,8 @@ uint8_t mifare_ultralight_anticollision_cl2(mifare_ultralight_handle_t *handle, 
 
 /**
  * @brief     mifare_ultralight select cl1
- * @param[in] *handle points to a mifare_ultralight handle structure
- * @param[in] *id points to an id buffer
+ * @param[in] *handle pointer to a mifare_ultralight handle structure
+ * @param[in] *id pointer to an id buffer
  * @return    status code
  *            - 0 success
  *            - 1 select cl1 failed
@@ -365,8 +365,8 @@ uint8_t mifare_ultralight_select_cl1(mifare_ultralight_handle_t *handle, uint8_t
 
 /**
  * @brief     mifare_ultralight select cl2
- * @param[in] *handle points to a mifare_ultralight handle structure
- * @param[in] *id points to an id buffer
+ * @param[in] *handle pointer to a mifare_ultralight handle structure
+ * @param[in] *id pointer to an id buffer
  * @return    status code
  *            - 0 success
  *            - 1 select cl2 failed
@@ -380,8 +380,8 @@ uint8_t mifare_ultralight_select_cl2(mifare_ultralight_handle_t *handle, uint8_t
 
 /**
  * @brief      mifare_ultralight get the version
- * @param[in]  *handle points to a mifare_ultralight handle structure
- * @param[out] *version points to a version structure
+ * @param[in]  *handle pointer to a mifare_ultralight handle structure
+ * @param[out] *version pointer to a version structure
  * @return     status code
  *             - 0 success
  *             - 1 get version failed
@@ -395,9 +395,9 @@ uint8_t mifare_ultralight_get_version(mifare_ultralight_handle_t *handle, mifare
 
 /**
  * @brief      mifare_ultralight read the counter
- * @param[in]  *handle points to a mifare_ultralight handle structure
- * @param[in]  addr is the read counter address
- * @param[out] *cnt points to a counter buffer
+ * @param[in]  *handle pointer to a mifare_ultralight handle structure
+ * @param[in]  addr read counter address
+ * @param[out] *cnt pointer to a counter buffer
  * @return     status code
  *             - 0 success
  *             - 1 read counter failed
@@ -412,9 +412,9 @@ uint8_t mifare_ultralight_read_counter(mifare_ultralight_handle_t *handle, uint8
 
 /**
  * @brief     mifare_ultralight increment the counter
- * @param[in] *handle points to a mifare_ultralight handle structure
- * @param[in] addr is the read counter address
- * @param[in] cnt is the increment counter
+ * @param[in] *handle pointer to a mifare_ultralight handle structure
+ * @param[in] addr read counter address
+ * @param[in] cnt increment counter
  * @return    status code
  *            - 0 success
  *            - 1 increment counter failed
@@ -429,9 +429,9 @@ uint8_t mifare_ultralight_increment_counter(mifare_ultralight_handle_t *handle, 
 
 /**
  * @brief      mifare_ultralight check the tearing event
- * @param[in]  *handle points to a mifare_ultralight handle structure
- * @param[in]  addr is the check address
- * @param[out] *flag points to a flag buffer
+ * @param[in]  *handle pointer to a mifare_ultralight handle structure
+ * @param[in]  addr check address
+ * @param[out] *flag pointer to a flag buffer
  * @return     status code
  *             - 0 success
  *             - 1 check tearing event failed
@@ -446,10 +446,10 @@ uint8_t mifare_ultralight_check_tearing_event(mifare_ultralight_handle_t *handle
 
 /**
  * @brief      mifare_ultralight vcsl command
- * @param[in]  *handle points to a mifare_ultralight handle structure
- * @param[in]  *installation_identifier points to an installation identifier buffer
- * @param[in]  *pcd_capabilities points to a pcd capabilities buffer
- * @param[out] *identifier points to an identifier buffer
+ * @param[in]  *handle pointer to a mifare_ultralight handle structure
+ * @param[in]  *installation_identifier pointer to an installation identifier buffer
+ * @param[in]  *pcd_capabilities pointer to a pcd capabilities buffer
+ * @param[out] *identifier pointer to an identifier buffer
  * @return     status code
  *             - 0 success
  *             - 1 vcsl failed
@@ -464,8 +464,8 @@ uint8_t mifare_ultralight_vcsl(mifare_ultralight_handle_t *handle, uint8_t insta
 
 /**
  * @brief      mifare_ultralight read the signature
- * @param[in]  *handle points to a mifare_ultralight handle structure
- * @param[out] *signature points to a signature buffer
+ * @param[in]  *handle pointer to a mifare_ultralight handle structure
+ * @param[out] *signature pointer to a signature buffer
  * @return     status code
  *             - 0 success
  *             - 1 read signature failed
@@ -479,8 +479,8 @@ uint8_t mifare_ultralight_read_signature(mifare_ultralight_handle_t *handle, uin
 
 /**
  * @brief      mifare_ultralight get the serial number
- * @param[in]  *handle points to a mifare_ultralight handle structure
- * @param[out] *number points to a number buffer
+ * @param[in]  *handle pointer to a mifare_ultralight handle structure
+ * @param[out] *number pointer to a number buffer
  * @return     status code
  *             - 0 success
  *             - 1 get serial number failed
@@ -494,9 +494,9 @@ uint8_t mifare_ultralight_get_serial_number(mifare_ultralight_handle_t *handle, 
 
 /**
  * @brief      mifare_ultralight read four pages
- * @param[in]  *handle points to a mifare_ultralight handle structure
- * @param[in]  start_page is the start page of read
- * @param[out] *data points to a data buffer
+ * @param[in]  *handle pointer to a mifare_ultralight handle structure
+ * @param[in]  start_page start page of read
+ * @param[out] *data pointer to a data buffer
  * @return     status code
  *             - 0 success
  *             - 1 read four pages failed
@@ -510,9 +510,9 @@ uint8_t mifare_ultralight_read_four_pages(mifare_ultralight_handle_t *handle, ui
 
 /**
  * @brief      mifare_ultralight read page
- * @param[in]  *handle points to a mifare_ultralight handle structure
- * @param[in]  page is the page of read
- * @param[out] *data points to a data buffer
+ * @param[in]  *handle pointer to a mifare_ultralight handle structure
+ * @param[in]  page page of read
+ * @param[out] *data pointer to a data buffer
  * @return     status code
  *             - 0 success
  *             - 1 read page failed
@@ -526,11 +526,11 @@ uint8_t mifare_ultralight_read_page(mifare_ultralight_handle_t *handle, uint8_t 
 
 /**
  * @brief         mifare_ultralight fast read page
- * @param[in]     *handle points to a mifare_ultralight handle structure
- * @param[in]     start_page is the start page
- * @param[in]     stop_page is the stop page
- * @param[out]    *data points to a data buffer
- * @param[in,out] *len points to a data length buffer
+ * @param[in]     *handle pointer to a mifare_ultralight handle structure
+ * @param[in]     start_page start page
+ * @param[in]     stop_page stop page
+ * @param[out]    *data pointer to a data buffer
+ * @param[in,out] *len pointer to a data length buffer
  * @return        status code
  *                - 0 success
  *                - 1 fast read page failed
@@ -548,9 +548,9 @@ uint8_t mifare_ultralight_fast_read_page(mifare_ultralight_handle_t *handle, uin
 
 /**
  * @brief     mifare_ultralight compatibility write page
- * @param[in] *handle points to a mifare_ultralight handle structure
- * @param[in] page is the page of write
- * @param[in] *data points to a data buffer
+ * @param[in] *handle pointer to a mifare_ultralight handle structure
+ * @param[in] page page of write
+ * @param[in] *data pointer to a data buffer
  * @return    status code
  *            - 0 success
  *            - 1 compatibility write page failed
@@ -564,9 +564,9 @@ uint8_t mifare_ultralight_compatibility_write_page(mifare_ultralight_handle_t *h
 
 /**
  * @brief     mifare_ultralight write page
- * @param[in] *handle points to a mifare_ultralight handle structure
- * @param[in] page is the page of write
- * @param[in] *data points to a data buffer
+ * @param[in] *handle pointer to a mifare_ultralight handle structure
+ * @param[in] page page of write
+ * @param[in] *data pointer to a data buffer
  * @return    status code
  *            - 0 success
  *            - 1 write page failed
@@ -580,9 +580,9 @@ uint8_t mifare_ultralight_write_page(mifare_ultralight_handle_t *handle, uint8_t
 
 /**
  * @brief     mifare_ultralight authenticate
- * @param[in] *handle points to a mifare_ultralight handle structure
- * @param[in] *pwd points to a pwd buffer
- * @param[in] *pack points to a pack buffer
+ * @param[in] *handle pointer to a mifare_ultralight handle structure
+ * @param[in] *pwd pointer to a pwd buffer
+ * @param[in] *pack pointer to a pack buffer
  * @return    status code
  *            - 0 success
  *            - 1 authenticate failed
@@ -597,8 +597,8 @@ uint8_t mifare_ultralight_authenticate(mifare_ultralight_handle_t *handle, uint8
 
 /**
  * @brief     mifare_ultralight set the password
- * @param[in] *handle points to a mifare_ultralight handle structure
- * @param[in] *pwd points to a password buffer
+ * @param[in] *handle pointer to a mifare_ultralight handle structure
+ * @param[in] *pwd pointer to a password buffer
  * @return    status code
  *            - 0 success
  *            - 1 set pwd failed
@@ -612,8 +612,8 @@ uint8_t mifare_ultralight_set_password(mifare_ultralight_handle_t *handle, uint8
 
 /**
  * @brief     mifare_ultralight set the pack
- * @param[in] *handle points to a mifare_ultralight handle structure
- * @param[in] *pack points to a pack buffer
+ * @param[in] *handle pointer to a mifare_ultralight handle structure
+ * @param[in] *pack pointer to a pack buffer
  * @return    status code
  *            - 0 success
  *            - 1 set pack failed
@@ -627,8 +627,8 @@ uint8_t mifare_ultralight_set_pack(mifare_ultralight_handle_t *handle, uint8_t p
 
 /**
  * @brief     mifare_ultralight set the modulation mode
- * @param[in] *handle points to a mifare_ultralight handle structure
- * @param[in] mode is the modulation mode
+ * @param[in] *handle pointer to a mifare_ultralight handle structure
+ * @param[in] mode modulation mode
  * @return    status code
  *            - 0 success
  *            - 1 set modulation mode failed
@@ -640,8 +640,8 @@ uint8_t mifare_ultralight_set_modulation_mode(mifare_ultralight_handle_t *handle
 
 /**
  * @brief      mifare_ultralight get the modulation mode
- * @param[in]  *handle points to a mifare_ultralight handle structure
- * @param[out] *mode points to a modulation mode buffer
+ * @param[in]  *handle pointer to a mifare_ultralight handle structure
+ * @param[out] *mode pointer to a modulation mode buffer
  * @return     status code
  *             - 0 success
  *             - 1 get modulation mode failed
@@ -653,8 +653,8 @@ uint8_t mifare_ultralight_get_modulation_mode(mifare_ultralight_handle_t *handle
 
 /**
  * @brief     mifare_ultralight set the start page of protection
- * @param[in] *handle points to a mifare_ultralight handle structure
- * @param[in] page is the start page
+ * @param[in] *handle pointer to a mifare_ultralight handle structure
+ * @param[in] page start page
  * @return    status code
  *            - 0 success
  *            - 1 set protect start page failed
@@ -666,8 +666,8 @@ uint8_t mifare_ultralight_set_protect_start_page(mifare_ultralight_handle_t *han
 
 /**
  * @brief      mifare_ultralight get the start page of protection
- * @param[in]  *handle points to a mifare_ultralight handle structure
- * @param[out] *page points to a start page buffer
+ * @param[in]  *handle pointer to a mifare_ultralight handle structure
+ * @param[out] *page pointer to a start page buffer
  * @return     status code
  *             - 0 success
  *             - 1 get protect start page failed
@@ -679,9 +679,9 @@ uint8_t mifare_ultralight_get_protect_start_page(mifare_ultralight_handle_t *han
 
 /**
  * @brief     mifare_ultralight enable or disable access
- * @param[in] *handle points to a mifare_ultralight handle structure
- * @param[in] access is the set access
- * @param[in] enable is a bool value
+ * @param[in] *handle pointer to a mifare_ultralight handle structure
+ * @param[in] access set access
+ * @param[in] enable bool value
  * @return    status code
  *            - 0 success
  *            - 1 set access failed
@@ -693,9 +693,9 @@ uint8_t mifare_ultralight_set_access(mifare_ultralight_handle_t *handle, mifare_
 
 /**
  * @brief      mifare_ultralight get the access status
- * @param[in]  *handle points to a mifare_ultralight handle structure
- * @param[in]  access is the set access
- * @param[out] *enable points to a bool value buffer
+ * @param[in]  *handle pointer to a mifare_ultralight handle structure
+ * @param[in]  access set access
+ * @param[out] *enable pointer to a bool value buffer
  * @return     status code
  *             - 0 success
  *             - 1 get access failed
@@ -707,8 +707,8 @@ uint8_t mifare_ultralight_get_access(mifare_ultralight_handle_t *handle, mifare_
 
 /**
  * @brief     mifare_ultralight set the authenticate limitation
- * @param[in] *handle points to a mifare_ultralight handle structure
- * @param[in] limit is the authenticate limitation
+ * @param[in] *handle pointer to a mifare_ultralight handle structure
+ * @param[in] limit authenticate limitation
  * @return    status code
  *            - 0 success
  *            - 1 set authenticate limitation failed
@@ -721,8 +721,8 @@ uint8_t mifare_ultralight_set_authenticate_limitation(mifare_ultralight_handle_t
 
 /**
  * @brief      mifare_ultralight get the authenticate limitation
- * @param[in]  *handle points to a mifare_ultralight handle structure
- * @param[out] *limit points to an authenticate limitation buffer
+ * @param[in]  *handle pointer to a mifare_ultralight handle structure
+ * @param[out] *limit pointer to an authenticate limitation buffer
  * @return     status code
  *             - 0 success
  *             - 1 get authenticate limitation failed
@@ -734,8 +734,8 @@ uint8_t mifare_ultralight_get_authenticate_limitation(mifare_ultralight_handle_t
 
 /**
  * @brief     mifare_ultralight set the virtual card type identifier
- * @param[in] *handle points to a mifare_ultralight handle structure
- * @param[in] identifier is the virtual card type identifier
+ * @param[in] *handle pointer to a mifare_ultralight handle structure
+ * @param[in] identifier virtual card type identifier
  * @return    status code
  *            - 0 success
  *            - 1 set virtual card type identifier failed
@@ -747,8 +747,8 @@ uint8_t mifare_ultralight_set_virtual_card_type_identifier(mifare_ultralight_han
 
 /**
  * @brief      mifare_ultralight get the virtual card type identifier
- * @param[in]  *handle points to a mifare_ultralight handle structure
- * @param[out] *identifier points to a virtual card type identifier buffer
+ * @param[in]  *handle pointer to a mifare_ultralight handle structure
+ * @param[out] *identifier pointer to a virtual card type identifier buffer
  * @return     status code
  *             - 0 success
  *             - 1 get virtual card type identifier failed
@@ -760,8 +760,8 @@ uint8_t mifare_ultralight_get_virtual_card_type_identifier(mifare_ultralight_han
 
 /**
  * @brief     mifare_ultralight set the lock
- * @param[in] *handle points to a mifare_ultralight handle structure
- * @param[in] *lock points to a lock buffer
+ * @param[in] *handle pointer to a mifare_ultralight handle structure
+ * @param[in] *lock pointer to a lock buffer
  * @return    status code
  *            - 0 success
  *            - 1 set lock failed
@@ -789,8 +789,8 @@ uint8_t mifare_ultralight_set_lock(mifare_ultralight_handle_t *handle, uint8_t l
 
 /**
  * @brief      mifare_ultralight get the lock
- * @param[in]  *handle points to a mifare_ultralight handle structure
- * @param[out] *lock points to a lock buffer
+ * @param[in]  *handle pointer to a mifare_ultralight handle structure
+ * @param[out] *lock pointer to a lock buffer
  * @return     status code
  *             - 0 success
  *             - 1 get lock failed
@@ -804,8 +804,8 @@ uint8_t mifare_ultralight_get_lock(mifare_ultralight_handle_t *handle, uint8_t l
 
 /**
  * @brief      mifare_ultralight read otp page
- * @param[in]  *handle points to a mifare_ultralight handle structure
- * @param[out] *data points to a data buffer
+ * @param[in]  *handle pointer to a mifare_ultralight handle structure
+ * @param[out] *data pointer to a data buffer
  * @return     status code
  *             - 0 success
  *             - 1 read otp page failed
@@ -819,8 +819,8 @@ uint8_t mifare_ultralight_read_otp(mifare_ultralight_handle_t *handle, uint8_t d
 
 /**
  * @brief     mifare_ultralight write otp page
- * @param[in] *handle points to a mifare_ultralight handle structure
- * @param[in] *data points to a data buffer
+ * @param[in] *handle pointer to a mifare_ultralight handle structure
+ * @param[in] *data pointer to a data buffer
  * @return    status code
  *            - 0 success
  *            - 1 write otp page failed
@@ -845,11 +845,11 @@ uint8_t mifare_ultralight_write_otp(mifare_ultralight_handle_t *handle, uint8_t 
 
 /**
  * @brief         transceiver data
- * @param[in]     *handle points to a mifare_ultralight handle structure
- * @param[in]     *in_buf points to an input buffer
- * @param[in]     in_len is the input length
- * @param[out]    *out_buf points to an output buffer
- * @param[in,out] *out_len points to an output length buffer
+ * @param[in]     *handle pointer to a mifare_ultralight handle structure
+ * @param[in]     *in_buf pointer to an input buffer
+ * @param[in]     in_len input length
+ * @param[out]    *out_buf pointer to an output buffer
+ * @param[in,out] *out_len pointer to an output length buffer
  * @return        status code
  *                - 0 success
  *                - 1 transceiver failed
