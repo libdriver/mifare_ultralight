@@ -10,7 +10,7 @@
 
 NXP Semiconductors developed the MIFARE Ultralight EV1 MF0ULx1 for use in a contactless smart ticket, smart card, or token in combination with a Proximity Coupling Device (PCD). The MF0ULx1 is designed to work in an ISO/IEC 14443 Type-A compliant environment. The target applications include single trip or limited use tickets in public transport networks, loyalty cards or day passes for events. The MF0ULx1 serves as a replacement for conventional ticketing solutions such as paper tickets, magnetic stripe tickets or coins. It serves as a ticketing counterpart to contactless card families such as MIFARE DESFire or MIFARE Plus.The MIFARE Ultralight EV1 is succeeding the MIFARE Ultralight ticketing IC and is fully functional backward compatible. Its enhanced feature and command set enables more efficient implementations and offers more flexibility in system designs.The mechanical and electrical specifications of MIFARE Ultralight EV1 are tailored to meet the requirements of inlay and paper ticket manufacturers.
 
-LibDriver MIFARE_Ultralight is the full function driver of MIFARE_Ultralight launched by LibDriver.It provides the function of read page, write page and so on. LibDriver is MISRA compliant.
+LibDriver MIFARE_Ultralight is a full-featured driver of MIFARE_Ultralight launched by LibDriver.It provides the function of read page, write page and so on. LibDriver is MISRA compliant.
 
 This repository includes submodule and you shold add "--recursive" to clone the whole project.
 
