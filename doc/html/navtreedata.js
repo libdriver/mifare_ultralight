@@ -24,8 +24,9 @@
 */
 var NAVTREE =
 [
-  [ "LibDriver MIFARE Ultralight", "index.html", [
-    [ "Modules", "modules.html", "modules" ],
+  [ "LibDriver MIFARE_ULTRALIGHT", "index.html", [
+    [ "LibDriver MIFARE ULTRALIGHT", "index.html", null ],
+    [ "Topics", "topics.html", "topics" ],
     [ "Data Structures", "annotated.html", [
       [ "Data Structures", "annotated.html", "annotated_dup" ],
       [ "Data Structure Index", "classes.html", null ],
@@ -50,9 +51,9 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html",
-"group__mifare__ultralight__example__driver.html#ga7d011fa0bf738cf3b135a56663247779"
+"annotated.html"
 ];
 
-var SYNCONMSG = 'click to disable panel synchronisation';
-var SYNCOFFMSG = 'click to enable panel synchronisation';
+var SYNCONMSG = 'click to disable panel synchronization';
+var SYNCOFFMSG = 'click to enable panel synchronization';
+var LISTOFALLMEMBERS = 'List of all members';
