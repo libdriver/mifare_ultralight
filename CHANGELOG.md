@@ -1,3 +1,9 @@
+## 1.0.11 (2026-01-26)
+
+## Features
+
+- update reader
+
 ## 1.0.10 (2025-10-26)
 
 ## Features
