@@ -780,7 +780,7 @@ uint8_t mifare_ultralight_get_virtual_card_type_identifier(mifare_ultralight_han
  *            lock_page_30-31 lock_page_28-29 lock_page_26-27 lock_page_24-25  lock_page_22-23  lock_page_20-21  lock_page_18-19  lock_page_16-17 
  *                                                            byte3                                                                               
  *            bit7            bit6            bit5            bit4             bit3             bit2             bit1             bit0            
- *            rfui            rfui            rfui            rfui             rfui             rfui             lock_page_34-35  lock_page_32-22 
+ *            rfui            rfui            rfui            rfui             rfui             rfui             lock_page_34-35  lock_page_32-33 
  *                                                            byte4                                                                               
  *            bit7            bit6            bit5            bit4             bit3             bit2             bit1             bit0            
  *            rfui            rfui            rfui            block_page_32_35 block_page_28_31 block_page_24_27 block_page_20_23 block_page_16_19
