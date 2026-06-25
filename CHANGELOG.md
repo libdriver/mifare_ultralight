@@ -1,3 +1,9 @@
+## 1.0.12 (2026-06-22)
+
+## Bug Fixes
+
+- fix command bugs
+
 ## 1.0.11 (2026-01-26)
 
 ## Features

@@ -1104,7 +1104,7 @@ uint8_t mifare_ultralight_vcsl(mifare_ultralight_handle_t *handle, uint8_t insta
     }
     
     input_len = 23;                                                                              /* set the input length */
-    input_buf[0] = MIFARE_ULTRALIGHT_COMMAND_CHECK_TEARING_EVENT;                                /* set the command */
+    input_buf[0] = MIFARE_ULTRALIGHT_COMMAND_VCSL;                                               /* set the command */
     memcpy(input_buf + 1, installation_identifier, 16);
     memcpy(input_buf + 17, pcd_capabilities, 4);
     a_mifare_ultralight_iso14443a_crc(input_buf, 21, input_buf + 21);                            /* get the crc */
@@ -1873,8 +1873,8 @@ uint8_t mifare_ultralight_set_modulation_mode(mifare_ultralight_handle_t *handle
         
         return 1;                                                                    /* return error */
     }
-    conf[0] &= ~(1 << 2);                                                            /* clear the settings */
-    conf[0] |= mode << 2;                                                            /* set the mode */
+    conf[0] &= ~(1 << 1);                                                            /* clear the settings */
+    conf[0] |= mode << 1;                                                            /* set the mode */
     res = a_mifare_ultralight_conf_write(handle, handle->end_page - 3, conf);        /* write conf */
     if (res != 0)                                                                    /* check the result */
     {
@@ -1919,7 +1919,7 @@ uint8_t mifare_ultralight_get_modulation_mode(mifare_ultralight_handle_t *handle
         
         return 1;                                                                    /* return error */
     }
-    *mode = (mifare_ultralight_modulation_mode_t)((conf[0] >> 2) & 0x1);             /* get the conf */
+    *mode = (mifare_ultralight_modulation_mode_t)((conf[0] >> 1) & 0x1);             /* get the conf */
     
     return 0;                                                                        /* success return 0 */
 }
@@ -2289,7 +2289,7 @@ uint8_t mifare_ultralight_get_virtual_card_type_identifier(mifare_ultralight_han
  *            lock_page_30-31 lock_page_28-29 lock_page_26-27 lock_page_24-25  lock_page_22-23  lock_page_20-21  lock_page_18-19  lock_page_16-17 
  *                                                            byte3                                                                               
  *            bit7            bit6            bit5            bit4             bit3             bit2             bit1             bit0            
- *            rfui            rfui            rfui            rfui             rfui             rfui             lock_page_34-35  lock_page_32-22 
+ *            rfui            rfui            rfui            rfui             rfui             rfui             lock_page_34-35  lock_page_32-33 
  *                                                            byte4                                                                               
  *            bit7            bit6            bit5            bit4             bit3             bit2             bit1             bit0            
  *            rfui            rfui            rfui            block_page_32_35 block_page_28_31 block_page_24_27 block_page_20_23 block_page_16_19
