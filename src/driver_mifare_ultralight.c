@@ -1569,6 +1569,12 @@ uint8_t mifare_ultralight_compatibility_write_page(mifare_ultralight_handle_t *h
         
         return 1;                                                                                /* return error */
     }
+    if (output_len != 1)                                                                         /* check the output_len */
+    {
+        handle->debug_print("mifare_ultralight: output_len is invalid.\n");                      /* output_len is invalid */
+        
+        return 4;                                                                                /* return error */
+    }
     if (output_buf[0] != 0xA)                                                                    /* check the result */
     {
         handle->debug_print("mifare_ultralight: ack error.\n");                                  /* ack error */
@@ -2340,33 +2346,36 @@ uint8_t mifare_ultralight_set_lock(mifare_ultralight_handle_t *handle, uint8_t l
         return 5;                                                                                /* return error */
     }
     
-    input_len = 8;                                                                               /* set the input length */
-    input_buf[0] = MIFARE_ULTRALIGHT_COMMAND_WRITE;                                              /* set the command */
-    input_buf[1] = handle->end_page - 4;                                                         /* set the setting page */
-    input_buf[2] = lock[2];                                                                      /* set lock2 */
-    input_buf[3] = lock[3];                                                                      /* set lock3 */
-    input_buf[4] = lock[4];                                                                      /* set lock4 */
-    input_buf[5] = 0x00;                                                                         /* set 0x00 */
-    a_mifare_ultralight_iso14443a_crc(input_buf, 6, input_buf + 6);                              /* get the crc */
-    output_len = 1;                                                                              /* set the output length */
-    res = handle->contactless_transceiver(input_buf, input_len, output_buf, &output_len);        /* transceiver */
-    if (res != 0)                                                                                /* check the result */
+    if (handle->end_page == (uint8_t)MIFARE_ULTRALIGHT_STORAGE_MF0UL21)                          /* lock bytes 2-4 only exist on mf0ul21 page 24h */
     {
-        handle->debug_print("mifare_ultralight: contactless transceiver failed.\n");             /* contactless transceiver failed */
-        
-        return 1;                                                                                /* return error */
-    }
-    if (output_len != 1)                                                                         /* check the output_len */
-    {
-        handle->debug_print("mifare_ultralight: output_len is invalid.\n");                      /* output_len is invalid */
-        
-        return 4;                                                                                /* return error */
-    }
-    if (output_buf[0] != 0xA)                                                                    /* check the result */
-    {
-        handle->debug_print("mifare_ultralight: ack error.\n");                                  /* ack error */
-        
-        return 5;                                                                                /* return error */
+        input_len = 8;                                                                           /* set the input length */
+        input_buf[0] = MIFARE_ULTRALIGHT_COMMAND_WRITE;                                          /* set the command */
+        input_buf[1] = handle->end_page - 4;                                                     /* set the setting page */
+        input_buf[2] = lock[2];                                                                  /* set lock2 */
+        input_buf[3] = lock[3];                                                                  /* set lock3 */
+        input_buf[4] = lock[4];                                                                  /* set lock4 */
+        input_buf[5] = 0x00;                                                                     /* set 0x00 */
+        a_mifare_ultralight_iso14443a_crc(input_buf, 6, input_buf + 6);                          /* get the crc */
+        output_len = 1;                                                                          /* set the output length */
+        res = handle->contactless_transceiver(input_buf, input_len, output_buf, &output_len);    /* transceiver */
+        if (res != 0)                                                                            /* check the result */
+        {
+            handle->debug_print("mifare_ultralight: contactless transceiver failed.\n");         /* contactless transceiver failed */
+            
+            return 1;                                                                            /* return error */
+        }
+        if (output_len != 1)                                                                     /* check the output_len */
+        {
+            handle->debug_print("mifare_ultralight: output_len is invalid.\n");                  /* output_len is invalid */
+            
+            return 4;                                                                            /* return error */
+        }
+        if (output_buf[0] != 0xA)                                                                /* check the result */
+        {
+            handle->debug_print("mifare_ultralight: ack error.\n");                              /* ack error */
+            
+            return 5;                                                                            /* return error */
+        }
     }
     
     return 0;                                                                                    /* success return 0 */
@@ -2434,37 +2443,48 @@ uint8_t mifare_ultralight_get_lock(mifare_ultralight_handle_t *handle, uint8_t l
         return 5;                                                                                /* return error */
     }
     
-    input_len = 5;                                                                               /* set the input length */
-    input_buf[0] = MIFARE_ULTRALIGHT_COMMAND_FAST_READ;                                          /* set the command */
-    input_buf[1] = handle->end_page - 4;                                                         /* set the start page */
-    input_buf[2] = handle->end_page - 4;                                                         /* set the stop page */
-    a_mifare_ultralight_iso14443a_crc(input_buf , 3, input_buf + 3);                             /* get the crc */
-    output_len = 6;                                                                              /* set the output length */
-    res = handle->contactless_transceiver(input_buf, input_len, output_buf, &output_len);        /* transceiver */
-    if (res != 0)                                                                                /* check the result */
+    if (handle->end_page == (uint8_t)MIFARE_ULTRALIGHT_STORAGE_MF0UL21)                          /* lock bytes 2-4 only exist on mf0ul21 page 24h */
     {
-        handle->debug_print("mifare_ultralight: contactless transceiver failed.\n");             /* contactless transceiver failed */
-        
-        return 1;                                                                                /* return error */
-    }
-    if (output_len != 6)                                                                         /* check the output_len */
-    {
-        handle->debug_print("mifare_ultralight: output_len is invalid.\n");                      /* output_len is invalid */
-        
-        return 4;                                                                                /* return error */
-    }
-    a_mifare_ultralight_iso14443a_crc(output_buf, 4, crc_buf);                                   /* get the crc */
-    if ((output_buf[4] == crc_buf[0]) && (output_buf[5] == crc_buf[1]))                          /* check the crc */
-    {
-        memcpy(lock + 2, output_buf, 3);                                                         /* copy the data */
-        
-        return 0;                                                                                /* success return 0 */
+        input_len = 5;                                                                           /* set the input length */
+        input_buf[0] = MIFARE_ULTRALIGHT_COMMAND_FAST_READ;                                      /* set the command */
+        input_buf[1] = handle->end_page - 4;                                                     /* set the start page */
+        input_buf[2] = handle->end_page - 4;                                                     /* set the stop page */
+        a_mifare_ultralight_iso14443a_crc(input_buf , 3, input_buf + 3);                         /* get the crc */
+        output_len = 6;                                                                          /* set the output length */
+        res = handle->contactless_transceiver(input_buf, input_len, output_buf, &output_len);    /* transceiver */
+        if (res != 0)                                                                            /* check the result */
+        {
+            handle->debug_print("mifare_ultralight: contactless transceiver failed.\n");         /* contactless transceiver failed */
+            
+            return 1;                                                                            /* return error */
+        }
+        if (output_len != 6)                                                                     /* check the output_len */
+        {
+            handle->debug_print("mifare_ultralight: output_len is invalid.\n");                  /* output_len is invalid */
+            
+            return 4;                                                                            /* return error */
+        }
+        a_mifare_ultralight_iso14443a_crc(output_buf, 4, crc_buf);                               /* get the crc */
+        if ((output_buf[4] == crc_buf[0]) && (output_buf[5] == crc_buf[1]))                      /* check the crc */
+        {
+            memcpy(lock + 2, output_buf, 3);                                                     /* copy the data */
+            
+            return 0;                                                                            /* success return 0 */
+        }
+        else
+        {
+            handle->debug_print("mifare_ultralight: crc error.\n");                              /* crc error */
+            
+            return 5;                                                                            /* return error */
+        }
     }
     else
     {
-        handle->debug_print("mifare_ultralight: crc error.\n");                                  /* crc error */
+        lock[2] = 0x00;                                                                          /* no lock byte 2 */
+        lock[3] = 0x00;                                                                          /* no lock byte 3 */
+        lock[4] = 0x00;                                                                          /* no lock byte 4 */
         
-        return 5;                                                                                /* return error */
+        return 0;                                                                                /* success return 0 */
     }
 }
 
